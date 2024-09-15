@@ -41,7 +41,7 @@ resource "azurerm_linux_virtual_machine" "test" {
   location                        = azurerm_resource_group.test.location
   size                            = "Standard_B1s"
   admin_username                  = "adminuser"
-  admin_password                  = "adminuser@123"
+  admin_password                  = "adminu@123"
   disable_password_authentication = "false"
   network_interface_ids = [
     azurerm_network_interface.test.id,
