@@ -18,12 +18,12 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-  resources:
-    repositories:
-      - repositary: templates
-        type: github
-        ref: refs/tags/v2.7.0
-        endpoint:
+resources:
+  repositories:
+   - repositary: templates
+     type: github
+     ref: refs/tags/v2.7.0
+     endpoint: "MaryamS_Food"
 
     extends:
       template: pipeline.yml@templates
