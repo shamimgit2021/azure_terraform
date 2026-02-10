@@ -20,11 +20,12 @@ steps:
 
 resources:
   repositories:
-   - repository: templates
-     type: github
-     name: shamimgit2021/azure_terraform
-     ref: refs/tags/v2.7.0
-     endpoint: "MaryamS_Food"
+    - repository: templates
+      type: github
+      name: shamimgit2021/azure_terraform
+      ref: refs/tags/v2.7.0
+      endpoint: MaryamS_Food
 
 extends:
   template: pipeline.yml@templates
+
