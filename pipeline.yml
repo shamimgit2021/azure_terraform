@@ -26,5 +26,5 @@ resources:
      ref: refs/tags/v2.7.0
      endpoint: "MaryamS_Food"
 
-    extends:
-     - template: pipeline.yml@templates
+extends:
+  template: pipeline.yml@templates
