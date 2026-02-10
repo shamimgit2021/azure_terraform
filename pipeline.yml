@@ -20,10 +20,10 @@ steps:
 
 resources:
   repositories:
-   - repositary: templates
+   - repository: templates
      type: github
      ref: refs/tags/v2.7.0
      endpoint: "MaryamS_Food"
 
     extends:
-      template: pipeline.yml@templates
+     - template: pipeline.yml@templates
