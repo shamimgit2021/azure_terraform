@@ -4,16 +4,19 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+  - main
+
+include:
+
 
 resources:
   repositories:
     - repository: newtemplates
       type: github
-      name: shamimgit2021/azure_terraform
+      name: shamimgit2021/azure_terraform/MaryamS_Food
      # ref: refs/tags/v2.7.0
       endpoint: MaryamS_Food
 
 extends:
-  template: pipeline.yml@newtemplates
+  template: deploy_pipeline.yml@newtemplates
 
