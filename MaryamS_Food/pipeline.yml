@@ -15,7 +15,7 @@ resources:
       type: github
       name: shamimgit2021/azure_terraform/MaryamS_Food
      # ref: refs/tags/v2.7.0
-      endpoint: MaryamS_Food
+      endpoint: "github.com_azuredevops"
 
 extends:
   template: deploy_pipeline.yml@newtemplates
