@@ -9,7 +9,7 @@ resources:
     - repository: newtemplates
       type: github
       name: azure_terraform_modules
-      endpoint: MaryamS_Food
+      endpoint: "github.com_azuredevops"
 
 variables:
   azureServiceConnection: 'github.com_azuredevops'
