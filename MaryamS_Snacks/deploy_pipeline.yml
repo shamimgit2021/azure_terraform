@@ -12,7 +12,7 @@ resources:
       endpoint: "github_devops"
 
 variables:
-  azureServiceConnection: 'github.com_azuredevops'
+  azureServiceConnection: 'Azure_Azuredevops_serviceconnection'
 
 steps:
 
