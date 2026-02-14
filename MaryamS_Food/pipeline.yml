@@ -11,11 +11,11 @@ trigger:
 
 resources:
   repositories:
-    - repository: newtemplates
+    - repository: templates
       type: github
       name: shamimgit2021/azure_terraform/MaryamS_Food
      # ref: refs/tags/v2.7.0
       endpoint: "github.com_azuredevops"
 
 extends:
-  template: deploy_pipeline.yml@newtemplates
+  template: deploy_pipeline.yml@templates
