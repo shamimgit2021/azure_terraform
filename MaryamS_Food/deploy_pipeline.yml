@@ -40,7 +40,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    workingDirectory: '$(Build.SourcesDirectory)/newtemplates/azure_terraform_module'
+    workingDirectory: '$(Build.SourcesDirectory)/newtemplates/azure_terraform_modules'  # ✅ Fixed: Changed from "module" to "modules"
     environmentServiceNameAzureRM: $(azureServiceConnection)
 
 # 5️⃣ Terraform Apply
@@ -49,5 +49,5 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    workingDirectory: '$(Build.SourcesDirectory)/newtemplates'
+    workingDirectory: '$(Build.SourcesDirectory)/newtemplates/azure_terraform_modules'  # ✅ Fixed: Changed from just "newtemplates" to include the full path
     environmentServiceNameAzureRM: $(azureServiceConnection)
