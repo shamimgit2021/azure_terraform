@@ -6,7 +6,7 @@ resources:
   repositories:
     - repository: newtemplates
       type: github
-      name: azure_terraform_modules
+      name: shamimgit2021/azure_terraform_modules
       endpoint: "github_devops"
 
 variables:
