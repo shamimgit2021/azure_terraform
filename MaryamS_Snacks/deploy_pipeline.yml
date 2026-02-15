@@ -25,13 +25,13 @@ steps:
   displayName: Debug Folder Structure
 
 - script: terraform init
-  workingDirectory: '$(Build.SourcesDirectory)/newtemplates'
+  workingDirectory: '$(Build.SourcesDirectory)/terraformrepo'
   displayName: Terraform Init
 
 - script: terraform plan
-  workingDirectory: '$(Build.SourcesDirectory)/newtemplates'
+  workingDirectory: '$(Build.SourcesDirectory)/terraformrepo'
   displayName: Terraform Plan
 
 - script: terraform apply -auto-approve
-  workingDirectory: '$(Build.SourcesDirectory)/newtemplates'
+  workingDirectory: '$(Build.SourcesDirectory)/terraformrepo'
   displayName: Terraform Apply
