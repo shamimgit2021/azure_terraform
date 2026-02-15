@@ -19,10 +19,11 @@ steps:
 # 1️⃣ Checkout Terraform GitHub repository
 - checkout: terraformrepo
 
-- script: |
-    echo "Current Sources Directory:"
-    ls -R $(Build.SourcesDirectory)
-  displayName: Debug Folder Structure
+# Install Terraform (VERY IMPORTANT)
+- task: TerraformInstaller@1
+  displayName: Install Terraform
+  inputs:
+    terraformVersion: 'latest'
 
 - script: terraform init
   workingDirectory: '$(Build.SourcesDirectory)/azure_terraform_modules'
