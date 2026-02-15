@@ -16,7 +16,7 @@ variables:
 steps:
 
 # 1️⃣ Checkout Terraform GitHub repository
-- checkout: self
+- checkout: azure_terraform_modules
 
 - script: |
     echo "Current Sources Directory:"
