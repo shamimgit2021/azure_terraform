@@ -4,7 +4,7 @@ trigger:
 
 resources:
   repositories:
-    - repository: newtemplates
+    - repository: terraformrepo
       type: github
       name: shamimgit2021/azure_terraform_modules
       ref: refs/heads/main
@@ -15,8 +15,9 @@ variables:
 
 steps:
 
+- checkout: self
 # 1️⃣ Checkout Terraform GitHub repository
-- checkout: azure_terraform_modules
+- checkout: terraformrepo
 
 - script: |
     echo "Current Sources Directory:"
