@@ -18,4 +18,4 @@ resources:
       endpoint: "github_devops"
 
 extends:
-  template: deploy_pipeline.yml@templates
+  template: MaryamS_Snacks/deploy_pipeline.yml@templates
