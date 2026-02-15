@@ -18,6 +18,11 @@ steps:
 # 1️⃣ Checkout Terraform GitHub repository
 - checkout: newtemplates
 
+- script: |
+    echo "Current Sources Directory:"
+    ls -R $(Build.SourcesDirectory)
+  displayName: Debug Folder Structure
+
 - script: terraform init
   workingDirectory: '$(Build.SourcesDirectory)/newtemplates'
   displayName: Terraform Init
