@@ -16,7 +16,7 @@ variables:
 steps:
 
 # 1️⃣ Checkout Terraform GitHub repository
-- checkout: newtemplates
+- checkout: self
 
 - script: |
     echo "Current Sources Directory:"
