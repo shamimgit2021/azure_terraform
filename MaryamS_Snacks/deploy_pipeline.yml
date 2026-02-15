@@ -34,6 +34,7 @@ steps:
     provider: 'azurerm'
     command: 'init'
     workingDirectory: '$(Build.SourcesDirectory)/newtemplates'
+    backendType: 'self-configured'
     environmentServiceNameAzureRM: $(azureServiceConnection)
 
 # 4️⃣ Terraform Plan
