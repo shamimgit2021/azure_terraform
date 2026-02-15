@@ -18,39 +18,14 @@ steps:
 # 1️⃣ Checkout Terraform GitHub repository
 - checkout: newtemplates
 
-# 2️⃣ Install Terraform
-#- task: TerraformInstaller@1
-- script: |
-      wget https://releases.hashicorp.com/terraform/1.6.6/terraform_1.6.6_linux_amd64.zip
-      unzip terraform_1.6.6_linux_amd64.zip
-      sudo mv terraform /usr/local/bin/
-  displayName: Install Terraform
- 
-
-# 3️⃣ Terraform Init (NO backend)
-- task: TerraformTaskV4@4
+- script: terraform init
+  workingDirectory: '$(Build.SourcesDirectory)/newtemplates'
   displayName: Terraform Init
-  inputs:
-    provider: 'azurerm'
-    command: 'init'
-    workingDirectory: '$(Build.SourcesDirectory)/newtemplates'
-    backendType: 'self-configured'
-    environmentServiceNameAzureRM: $(azureServiceConnection)
 
-# 4️⃣ Terraform Plan
-- task: TerraformTaskV4@4
+- script: terraform plan
+  workingDirectory: '$(Build.SourcesDirectory)/newtemplates'
   displayName: Terraform Plan
-  inputs:
-    provider: 'azurerm'
-    command: 'plan'
-    workingDirectory: '$(Build.SourcesDirectory)/newtemplate'  # ✅ Fixed: Changed from "module" to "modules"
-    environmentServiceNameAzureRM: $(azureServiceConnection)
 
-# 5️⃣ Terraform Apply
-- task: TerraformTaskV4@4
+- script: terraform apply -auto-approve
+  workingDirectory: '$(Build.SourcesDirectory)/newtemplates'
   displayName: Terraform Apply
-  inputs:
-    provider: 'azurerm'
-    command: 'apply'
-    workingDirectory: '$(Build.SourcesDirectory)/newtemplates'  # ✅ Fixed: Changed from just "newtemplates" to include the full path
-    environmentServiceNameAzureRM: $(azureServiceConnection)
