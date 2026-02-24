@@ -5,7 +5,3 @@ output "starting" {
 output "test-pr" {
   value = "Starting to pr"
 }
-
-output "test1-pr" {
-  value = "Starting to pr1"
-}
